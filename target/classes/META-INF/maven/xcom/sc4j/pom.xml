@@ -1,10 +1,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	
+
 	<modelVersion>4.0.0</modelVersion>
-	
-	
+
+
 	<name>xcom-selenium-cucumber-4j</name>
 
 	<groupId>xcom</groupId>
@@ -17,5 +17,19 @@
 
 		<java.source.level>1.8</java.source.level>
 		<java.target.level>1.8</java.target.level>
+
+
+		<junit.junit.version>4.13.2</junit.junit.version>
 	</properties>
+
+	<dependencies>
+
+		<!-- Testing -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 </project>
