@@ -3,7 +3,7 @@ package xcom.seleunim;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class _Test_HelloWorld {
+public class Test_HelloWorld {
 
 	@Test
 	public void pass() {
