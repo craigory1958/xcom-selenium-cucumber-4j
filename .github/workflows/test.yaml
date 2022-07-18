@@ -41,7 +41,7 @@ jobs:
 
 
       - name: Run Tests
-        run: mvn --batch-mode -Dmaven.test.failure.ignore=true test
+        run: mvn -s $GITHUB_WORKSPACE/.github/workflows/maven-settings.xml --batch-mode -Dmaven.test.failure.ignore=true test
 
 #      - name: Report
 #        uses: dorny/test-reporter@v1
