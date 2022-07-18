@@ -34,7 +34,7 @@ jobs:
           server-password: MAVEN_ACCESS_TOKEN
 
       - name: Compile w/o Running Tests
-        run: mvn --batch-mode -DskipTests package
+        run: mvn -s $GITHUB_WORKSPACE/.github/workflows/maven-settings.xml --batch-mode -DskipTests package
         env:
           MAVEN_ACCESS_USER: ${{ secrets.MAVEN_ACCESS_USER }}
           MAVEN_ACCESS_TOKEN: ${{ secrets.MAVEN_ACCESS_TOKEN }}
