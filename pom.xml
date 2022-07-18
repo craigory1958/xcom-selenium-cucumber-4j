@@ -9,7 +9,7 @@
 
 	<groupId>xcom</groupId>
 	<artifactId>sc4j</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 
 	<properties>
 
@@ -28,6 +28,12 @@
 	</properties>
 
 	<dependencies>
+	
+		<dependency>
+			<groupId>xcom</groupId>
+			<artifactId>utils4j</artifactId>
+			<version>LATEST</version>
+		</dependency>
 
 		<!-- Testing -->
 		<dependency>
@@ -37,6 +43,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 
 	<build>
 		<pluginManagement>
@@ -79,4 +86,11 @@
 		</pluginManagement>
 	</build>
 
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Packages</name>
+			<url>https://maven.pkg.github.com/craigory1958/xcom-maven-repository</url>
+		</repository>
+	</distributionManagement>
 </project>

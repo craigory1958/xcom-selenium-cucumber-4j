@@ -14,17 +14,17 @@ jobs:
         uses: actions/checkout@v2
 
 
-     - name: Enable .github scripts
-       run: chmod +x .github/scripts/*.sh
+      - name: Enable .github scripts
+        run: chmod +x .github/scripts/*.sh
 
-     - name: Decrypt .protected files
-       run: .github/scripts/decryptProtectedFiles.sh ".protected/.protected"
-       env:
-         PROTECTED_FILES_PASSPHRASE: ${{ secrets.PROTECTED_FILES_PASSPHRASE }}
+      - name: Decrypt .protected files
+        run: .github/scripts/decryptProtectedFiles.sh ".protected/.protected"
+        env:
+          PROTECTED_FILES_PASSPHRASE: ${{ secrets.PROTECTED_FILES_PASSPHRASE }}
 
 
       - name: Set up JDK 1.8
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v3
         with:
           java-version: '8'
           distribution: 'adopt'
