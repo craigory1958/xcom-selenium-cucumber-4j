@@ -1,6 +1,6 @@
 
 
-name: Test
+name: Maven Test
 
 on: [workflow_dispatch]
 
@@ -34,14 +34,17 @@ jobs:
           server-password: MAVEN_ACCESS_TOKEN
 
       - name: Compile w/o Running Tests
-        run: mvn -s $GITHUB_WORKSPACE/.github/workflows/maven-settings.xml --batch-mode -DskipTests package
+        run: mvn -s maven-settings.xml --batch-mode -DskipTests package
         env:
           MAVEN_ACCESS_USER: ${{ secrets.MAVEN_ACCESS_USER }}
           MAVEN_ACCESS_TOKEN: ${{ secrets.MAVEN_ACCESS_TOKEN }}
 
 
       - name: Run Tests
-        run: mvn -s $GITHUB_WORKSPACE/.github/workflows/maven-settings.xml --batch-mode -Dmaven.test.failure.ignore=true test
+        run: mvn -s maven-settings.xml --batch-mode -Dmaven.test.failure.ignore=true test
+        env:
+          MAVEN_ACCESS_USER: ${{ secrets.MAVEN_ACCESS_USER }}
+          MAVEN_ACCESS_TOKEN: ${{ secrets.MAVEN_ACCESS_TOKEN }}
 
 #      - name: Report
 #        uses: dorny/test-reporter@v1
