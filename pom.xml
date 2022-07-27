@@ -13,7 +13,7 @@
 	<parent>
 		<groupId>xcom</groupId>
 		<artifactId>parent</artifactId>
-		<version>0.0.7b</version>
+		<version>0.0.7c</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 
